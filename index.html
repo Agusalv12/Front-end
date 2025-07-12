@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Página Web</title>
+  <meta name="description" content="Sitio web de ejemplo con carrito y contacto.">
+  <meta name="keywords" content="carrito, productos, contacto, tienda online">
+  <meta name="author" content="Tu Nombre">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -23,29 +26,35 @@
   <main>
     <section id="inicio">
       <h2>Inicio</h2>
-      <p>Esta es una página de ejemplo esta en proceso.</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      <p>Esta es una página de ejemplo que cumple con requisitos educativos.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
     </section>
 
     <section id="productos">
       <h2>Productos</h2>
-      <div class="productos-container">
-        <div class="card">Producto 1</div>
-        <div class="card">Producto 2</div>
-        <div class="card">Producto 3</div>
+      <div class="productos-container"></div>
+      <div>
+        <h3>Carrito (<span id="contador-carrito">0</span>)</h3>
+        <ul id="lista-carrito"></ul>
+        <p id="total-carrito">Total: $0</p>
       </div>
     </section>
 
+    <section id="reseñas">
+      <h2>Reseñas</h2>
+      <div class="reseñas-grid">
+        <div class="reseña">"Excelente producto!"</div>
+        <div class="reseña">"Muy buena atención."</div>
+        <div class="reseña">"Recomendado 100%."</div>
+        <div class="reseña">"Volveré a comprar."</div>
       </div>
       <div class="form-reseña">
         <h3>Dejá tu reseña</h3>
         <form action="https://formspree.io/f/tuformid" method="POST">
           <label for="nombre-reseña">Nombre:</label>
           <input type="text" id="nombre-reseña" name="nombre" required>
-
           <label for="comentario">Comentario:</label>
           <textarea id="comentario" name="comentario" required></textarea>
-
           <input type="hidden" name="tipo" value="reseña">
           <button type="submit">Enviar Reseña</button>
         </form>
@@ -57,13 +66,10 @@
       <form action="https://formspree.io/f/tuformid" method="POST">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
-
         <label for="email">Correo Electrónico:</label>
         <input type="email" id="email" name="email" required>
-
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" required></textarea>
-
         <input type="hidden" name="tipo" value="contacto">
         <button type="submit">Enviar</button>
       </form>
@@ -73,5 +79,7 @@
   <footer>
     <p>&copy; 2025 Mi Página Web</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
